@@ -1,19 +1,16 @@
 import React, { Component } from 'react';
 import AddTodo from '../Containers/AddTodo';
-import TodoList from './TodoList';
+import VisibleTodoList from '../Containers/VisibleTodoList';
 import Footer from './Footer';
-import todos from '../Stores/todos';
 
-class TodoApp extends Component {
-    render() {
-        return (
-            <div>
-                <AddTodo/>
-                <TodoList todos={todos}/>
-                <Footer/>
-            </div>
-        );
-    }
-}
+import 'todomvc-app-css/index.css';
+
+const TodoApp = () => (
+    <section className="todoapp">
+        <AddTodo/>
+        <VisibleTodoList/>
+        <Footer/>
+    </section>
+)
 
 export default TodoApp;
